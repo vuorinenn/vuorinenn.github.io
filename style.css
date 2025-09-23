@@ -21,17 +21,6 @@ body {
   font-size: 28px;
 }
 
-.logo-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo {
-  width: 200px;
-  height: auto;
-}
-
 .nav a {
   margin-left: 20px;
   text-decoration: none;
@@ -39,26 +28,21 @@ body {
 }
 
 .nav a:hover {
-  color: #d00;
+  color: rgb(209, 112, 0);
 }
 
-.hero {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 0 20px;
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
 }
 
-.hero h1 {
-  font-size: 32px;
-  margin-bottom: 20px;
-  font-style: italic;
+.logo {
+  width: 200px;
+  height: auto;
 }
 
-.hero p {
-  font-size: 18px;
-}
-
-.osoite,
 .socials {
   padding: 20px;
   text-align: right;
@@ -68,25 +52,42 @@ body {
 .socials img {
   width: 40px;
   height: auto;
-  max-width: 100%;
+  margin-left: 10px;
 }
 
-.lajit {
-  text-align: center;
-  padding: 30px;
+.osoite p {
+  font-size: 30px;
+  padding: 20px;
+  text-align: right;
+}
+
+.hero {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.hero p {
+  font-size: 24px;
+  color: #050505;
 }
 
 .lajimme h2 {
   font-size: 2rem;
   margin-bottom: 20px;
   font-style: italic;
+  text-align: center;
 }
 
-.lajit p {
-  font-size: 24px;
-  max-width: 700px;
-  margin: 0 auto 30px auto;
-  line-height: 1.5;
+.lajit {
+  text-align: center;
+  padding: 30px;
 }
 
 .icons {
@@ -100,7 +101,15 @@ body {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-align: center;
+}
+
+.icon p {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #000000;
 }
 
 .icon img {
@@ -108,4 +117,64 @@ body {
   height: 220px;
   object-fit: cover;
   display: block;
+  border: 2px solid #ce5504;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    font-size: 22px;
+    padding: 10px;
+  }
+
+  .nav a {
+    display: block;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .logo-container {
+    padding: 10px 0;
+  }
+
+  .hero {
+    padding: 0 10px;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .lajimme h2 {
+    font-size: 1.6rem;
+  }
+
+  .icons {
+    grid-template-columns: 1fr;
+  }
+
+  .icon img {
+    height: auto;
+  }
+
+  .socials {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .socials img {
+    margin: 5px;
+  }
+
+  .osoite p {
+    font-size: 18px;
+    text-align: center;
+  }
 }
